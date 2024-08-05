@@ -2,4 +2,4 @@
 
 set -x
 
-sbt "run -Dakka.http.server.default-http-port=8002 -Dakka.remote.artery.canonical.port=2553 -Dakka.management.http.port=8560 -Dcinnamon.prometheus.http-server.port=9003"
+sbt "run -Dpekko.http.server.default-http-port=8002 -Dpekko.remote.artery.canonical.port=2553 -Dpekko.management.http.port=8560 -Dcinnamon.prometheus.http-server.port=9003"

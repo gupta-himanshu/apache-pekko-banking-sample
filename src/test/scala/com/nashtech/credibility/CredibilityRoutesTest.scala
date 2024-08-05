@@ -1,9 +1,9 @@
-package com.knoldus.credibility
+package com.nashtech.credibility
 
-import akka.http.scaladsl.model.{ContentTypes, StatusCodes}
-import akka.http.scaladsl.testkit.ScalatestRouteTest
-import akka.testkit.{TestActor, TestProbe}
-import com.knoldus.credibility.CredibilityActorSupervisor.Deliver
+import org.apache.pekko.http.scaladsl.model.{ContentTypes, StatusCodes}
+import org.apache.pekko.http.scaladsl.testkit.ScalatestRouteTest
+import org.apache.pekko.testkit.{TestActor, TestProbe}
+import CredibilityActorSupervisor.Deliver
 import org.scalatest.wordspec.AnyWordSpec
 
 class CredibilityRoutesTest

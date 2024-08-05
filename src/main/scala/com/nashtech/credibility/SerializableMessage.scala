@@ -1,4 +1,4 @@
-package com.knoldus.credibility
+package com.nashtech.credibility
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 

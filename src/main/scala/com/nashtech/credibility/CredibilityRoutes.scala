@@ -1,12 +1,12 @@
-package com.knoldus.credibility
+package com.nashtech.credibility
 
-import akka.actor.ActorRef
-import akka.http.scaladsl.model.StatusCodes
-import akka.pattern.ask
-import akka.http.scaladsl.server.Directives._
-import akka.http.scaladsl.server.Route
-import akka.util.Timeout
-import com.knoldus.credibility.CredibilityActor.{CredibilityAdjustmentApplied, CredibilityAdjustmentRejected}
+import org.apache.pekko.actor.ActorRef
+import org.apache.pekko.http.scaladsl.model.StatusCodes
+import org.apache.pekko.pattern.ask
+import org.apache.pekko.http.scaladsl.server.Directives._
+import org.apache.pekko.http.scaladsl.server.Route
+import org.apache.pekko.util.Timeout
+import CredibilityActor.{CredibilityAdjustmentApplied, CredibilityAdjustmentRejected}
 
 import scala.concurrent.ExecutionContext
 import scala.concurrent.duration._

@@ -10,17 +10,17 @@ $ ./runNode2.sh
 * Observe the logs. You will know your cluster has successfully formed when the first node (running on port 2551) reports:
 
 ```
-Node [akka://Loyalty@127.0.0.1:2552] is JOINING, roles [dc-default]
-Leader is moving node [akka://Loyalty@127.0.0.1:2552] to [Up]
+Node [pekko://Credibility@127.0.0.1:2552] is JOINING, roles [dc-default]
+Leader is moving node [pekko://Credibility@127.0.0.1:2552] to [Up]
 ```
 
 * The second node (running on port 2552) should report:
 
 ```
-Cluster Node [akka://Loyalty@127.0.0.1:2552] - Welcome from [akka://Loyalty@127.0.0.1:2551]
+Cluster Node [pekko://Credibility@127.0.0.1:2552] - Welcome from [pekko://Credibility@127.0.0.1:2551]
 ```
 
-2. At this point, we have enabled Akka Clustering in our application. This creates the foundation for other Akka features such as Akka Cluster Sharding. Try the following experiment:
+2. At this point, we have enabled Pekko Clustering in our application. This creates the foundation for other Pekko features such as Pekko Cluster Sharding. Try the following experiment:
 
 ```
 $ ./credibility.sh -p 8000 -a sample credit 100

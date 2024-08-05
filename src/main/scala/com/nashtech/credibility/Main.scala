@@ -1,10 +1,10 @@
-package com.knoldus.credibility
+package com.nashtech.credibility
 
 import java.nio.file.Paths
-import akka.actor.ActorSystem
-import akka.cluster.sharding.{ClusterSharding, ClusterShardingSettings}
-import akka.http.scaladsl.Http
-import akka.management.scaladsl.AkkaManagement
+import org.apache.pekko.actor.ActorSystem
+import org.apache.pekko.cluster.sharding.{ClusterSharding, ClusterShardingSettings}
+import org.apache.pekko.http.scaladsl.Http
+import org.apache.pekko.management.scaladsl.PekkoManagement
 import com.typesafe.config.ConfigFactory
 import org.slf4j.LoggerFactory
 
@@ -20,7 +20,7 @@ object Main extends App {
 
   implicit val system: ActorSystem = ActorSystem("Credibility")
 
-  AkkaManagement(system).start()
+  PekkoManagement(system).start()
 
   val rootPath = Paths.get("tmp")
   val credibilityRepository: CredibilityRepository = new FileBasedCredibilityRepository(rootPath)(system.dispatcher)
@@ -35,6 +35,6 @@ object Main extends App {
 
   val credibilityRoutes = new CredibilityRoutes(credibilityActorSupervisor)(system.dispatcher)
 
-  private val port: Int = ConfigFactory.load().getInt("akka.http.server.default-http-port")
+  private val port: Int = ConfigFactory.load().getInt("pekko.http.server.default-http-port")
   Http().newServerAt("localhost", port).bindFlow(credibilityRoutes.routes)
 }

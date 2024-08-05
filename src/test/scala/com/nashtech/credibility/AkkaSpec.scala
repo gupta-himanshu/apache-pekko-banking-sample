@@ -1,7 +1,7 @@
-package com.knoldus.credibility
+package com.nashtech.credibility
 
-import akka.actor.ActorSystem
-import akka.util.Timeout
+import org.apache.pekko.actor.ActorSystem
+import org.apache.pekko.util.Timeout
 import org.scalatest.{BeforeAndAfterAll, Suite}
 
 import scala.concurrent.duration._

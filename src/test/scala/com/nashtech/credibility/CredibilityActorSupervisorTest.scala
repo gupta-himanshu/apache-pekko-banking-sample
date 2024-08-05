@@ -1,6 +1,6 @@
-package com.knoldus.credibility
+package com.nashtech.credibility
 
-import akka.pattern.ask
+import org.apache.pekko.pattern.ask
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.wordspec.AnyWordSpec
 

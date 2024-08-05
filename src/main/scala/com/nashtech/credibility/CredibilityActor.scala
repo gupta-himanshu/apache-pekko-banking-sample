@@ -1,7 +1,7 @@
-package com.knoldus.credibility
+package com.nashtech.credibility
 
-import akka.actor.{Actor, ActorLogging, Props, Stash}
-import akka.pattern.pipe
+import org.apache.pekko.actor.{Actor, ActorLogging, Props, Stash}
+import org.apache.pekko.pattern.pipe
 
 object CredibilityActor {
   sealed trait Command extends SerializableMessage

@@ -1,4 +1,4 @@
-package com.knoldus.credibility
+package com.nashtech.credibility
 
 case class CredibilityId(value: String)
 

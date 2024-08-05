@@ -1,11 +1,11 @@
-package com.knoldus.credibility
+package com.nashtech.credibility
 
 import java.util.UUID
 
-import akka.Done
-import akka.actor.ActorRef
-import akka.pattern.ask
-import com.knoldus.credibility.CredibilityActor.CredibilityAdjustmentRejected
+import org.apache.pekko.Done
+import org.apache.pekko.actor.ActorRef
+import org.apache.pekko.pattern.ask
+import CredibilityActor.CredibilityAdjustmentRejected
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.wordspec.AnyWordSpec
 

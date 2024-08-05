@@ -1,4 +1,4 @@
-package com.knoldus.credibility
+package com.nashtech.credibility
 
 import java.nio.file.{Files, Path}
 import java.util.UUID

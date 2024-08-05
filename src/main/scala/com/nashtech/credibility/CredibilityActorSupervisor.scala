@@ -1,7 +1,7 @@
-package com.knoldus.credibility
+package com.nashtech.credibility
 
-import akka.actor.{Actor, ActorRef, Props}
-import akka.cluster.sharding.ShardRegion.{ExtractEntityId, ExtractShardId}
+import org.apache.pekko.actor.{Actor, ActorRef, Props}
+import org.apache.pekko.cluster.sharding.ShardRegion.{ExtractEntityId, ExtractShardId}
 
 object CredibilityActorSupervisor {
   case class Deliver(command: CredibilityActor.Command, to: CredibilityId) extends SerializableMessage
